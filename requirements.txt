@@ -9,3 +9,4 @@ vaderSentiment
 transformers
 torch
 scikit-learn
+seaborn
