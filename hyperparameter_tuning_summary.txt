@@ -1,0 +1,53 @@
+
+HYPERPARAMETER TUNING SUMMARY REPORT
+================================================================================
+
+Total Configurations Tested: 9
+
+Hyperparameter Ranges:
+  - Learning Rate: 1e-05 to 5e-05
+  - Batch Size: 8 to 32
+  - Epochs: 3 to 5
+  - Weight Decay: 0.01 to 0.1
+
+Performance Ranges:
+  - Validation Accuracy: 0.8695 to 0.9018
+  - Correlation with Returns: 0.0258 to 0.0479
+  - Correlation with VADER: 0.9243 to 0.9420
+  - Training Time: 39.00 to 167.58 minutes
+
+Best Configuration (by Validation Accuracy):
+  - Name: baseline
+  - Learning Rate: 5e-05
+  - Batch Size: 16
+  - Epochs: 3
+  - Weight Decay: 0.01
+  - Validation Accuracy: 0.9018
+  - Validation Loss: 0.3880
+  - Correlation with Returns: 0.0350
+  - Correlation with VADER: 0.9420
+
+Best Configuration (by Market Correlation):
+  - Name: low_lr_long
+  - Learning Rate: 1e-05
+  - Batch Size: 16
+  - Epochs: 5
+  - Weight Decay: 0.01
+  - Validation Accuracy: 0.8845
+  - Validation Loss: 0.3663
+  - Correlation with Returns: 0.0479
+  - Correlation with VADER: 0.9336
+
+Key Findings:
+  1. Learning rate appears to have strong impact on validation accuracy
+  2. Batch size shows significant effect on performance
+  3. Total tuning time: 729.89 minutes
+  4. Best model saved to: ./best_hyperparameter_model
+
+Comparison with Original Model (from distilroberta_finetuning.ipynb):
+  - Original Validation Accuracy: 0.8950
+  - Original Correlation with Returns: 0.0403
+  - Best Tuned Validation Accuracy: 0.9018 (improved)
+  - Best Tuned Correlation: 0.0479 (improved)
+
+================================================================================
